@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "color.h"
-#include <windows.h> // RGB
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
