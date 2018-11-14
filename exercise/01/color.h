@@ -8,7 +8,6 @@ private:
 
 public:
 	color(double r = 0, double g = 0, double b = 0);
-	color(const color& other);
 	const double get_red() const;
 	const double get_green() const ;
 	const double get_blue() const;
@@ -22,7 +21,6 @@ public:
 	color operator=(const color& c);
 
 private:
-	double set_color(double v) const;
 	void set_rgb (double r, double g, double b);
 
 };

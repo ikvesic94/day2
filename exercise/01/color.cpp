@@ -1,13 +1,28 @@
 #include "stdafx.h"
 #include "color.h"
 
+
+
+namespace 
+{
+	double set_color(double v)
+	{
+		if (v < 0)
+		{
+			return 0.;
+		}
+		else if (v > 1)
+		{
+			return 1.;
+		}
+
+		return v;
+	}
+}
+
 color::color(double r, double g, double b)
 {
 	set_rgb(r, g, b);
-}
-
-color::color(const color& other) : color(other.r,other.g,other.b)
-{
 }
 
 void color::set_rgb(double r, double g, double b) 
@@ -15,20 +30,6 @@ void color::set_rgb(double r, double g, double b)
 	set_red(r);
 	set_green(g);
 	set_blue(b);
-}
-
-double color::set_color(double v)  const
-{
-	if (v < 0)
-	{
-		return 0.;
-	}
-	else if (v > 1) 
-	{
-		return 1.;
-	}
-
-	return v;
 }
 
 const double color::get_red()  const
